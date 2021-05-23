@@ -3,17 +3,30 @@
 ### An AutoHotKey script that allows for unintrusive emulation of a numeric keypad for the Lenovo T430 ThinkPad.
 
 By default, this script remaps the following key:
-  - 'CTRL' + 'INSERT' remapped to 'NUM LOCK'
+  - 'Ctrl' + 'Insert' remapped to 'NumLock'
 
 Based on this, the following keys get conditionally remapped in order to emulate a numeric keypad:
-  - 'ALT GR' remapped to 'RIGHT ALT (depressed)'
+  - 'Alt Gr' remapped to 'RIGHT Alt (depressed)'
   - '0'-'9' remapped to 'NUMPAD0'-'NUMPAD9' respectively
   - '=' remapped to 'NUMPAD+'
-  - 'ENTER' remapped to 'RIGHT ALT (released)'
+  - 'Enter' remapped to 'RIGHT Alt (released)'
 
-The method for inputting an alt code is as follows:
-  1) Press 'CTRL' + 'INSERT' to toggle 'NUM LOCK' on
-  2) Press 'ALT GR' momentarily (AutoHotKey will keep this latched on)
-  3) Press '=' ('NUMPAD+') to start the alt code sequence
-  4) Type the 3 or 4 digit alt code, this can include hexadecimal letters (i.e. 03A9 for a 'Ω' symbol)
-  5) Hit 'ENTER' to confirm the alt code, the character should display
+NOTE: To type the hexadecmial characters 'A' through 'F', simply use the corresponding letter key on the keyboard as this does not need remapping.
+
+### Instructions for use:
+
+1. Press 'Ctrl' + 'Insert' to toggle the NumLock key ON.
+2. Press the 'Alt Gr' key to begin entering numeric keypad characters.
+3. Type the sequence of numeric keypad characters.
+4. Press 'Enter' to display the character (pressing 'Enter' mid-sequence also acts so as to 'abort' the sequence).
+5. Repeat steps 3 & 4 as required until all the desired alt-code or unicode characters have been typed.
+6. Press 'Ctrl' + 'Insert' to toggle the NumLock key off and return original functionality to all keys.
+
+For example, to enter the unicode 'Ω' character, one would:
+
+1. Press 'Ctrl' + 'Insert'
+2. Press 'Alt Gr'
+3. Type '+' '2' '1' '2' '6'
+4. Press 'Enter'
+5. Press 'Ctrl' + 'Insert'
+
